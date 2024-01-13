@@ -1,4 +1,5 @@
 import SCarousel from "../../components/carousel/SCarousel";
+import Counter from "../../components/counter/Counter";
 import "./Home.scss";
 
 const Home = () => {
@@ -21,10 +22,11 @@ const Home = () => {
     },
   ];
   return (
-    <div>
+    <div className="home">
       <div className="carouse-container">
         <SCarousel data={data} />
       </div>
+      <Counter />
     </div>
   );
 };
