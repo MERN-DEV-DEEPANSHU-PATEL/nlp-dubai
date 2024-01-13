@@ -1,0 +1,99 @@
+@import "../../mixin&var";
+header {
+  background-color: transparent;
+  z-index: 999;
+  position: relative;
+  color: white;
+  .nav {
+    max-width: 1200px;
+    margin: auto;
+
+    &-top {
+      // transition: all ease-in-out 0.3s;
+      font-size: 2rem;
+      padding-top: 1rem;
+      @include flexRow(space-between, 1rem);
+      &--contact,
+      &--social {
+        span {
+          margin: 0 1rem 0 1rem;
+        }
+        .icon {
+          color: white;
+          a svg {
+            transition: all ease-in 0.3s;
+          }
+          &:hover {
+            a svg {
+              color: blue;
+              transform: scale(1.5);
+            }
+          }
+        }
+      }
+      &--contact {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        .c-item {
+          display: flex;
+          align-items: center;
+          justify-content: flex-start;
+          &:hover {
+            a,
+            svg {
+              color: black;
+            }
+          }
+          a {
+            margin: 0 1rem 0 1rem;
+          }
+        }
+      }
+    }
+
+    &-bottom {
+      margin-top: 1rem;
+      @include flexRow(space-between, 1rem);
+
+      .logo {
+        img {
+          width: 20rem;
+        }
+      }
+
+      .items {
+        @include flexRow(space-between, 2.5rem);
+        font-size: 2rem;
+        .link {
+          transition: all ease-in-out 0.3s;
+
+          &:hover {
+            transform: scale(1.2);
+            a {
+              color: red;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.header-fixed {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: white;
+
+  z-index: 1000;
+
+  .nav-top {
+    transform: translateY(-100%);
+    display: none;
+    transition: transform ease-in-out 1s, display ease-out 0.31;
+  }
+  a {
+    color: black;
+  }
+}

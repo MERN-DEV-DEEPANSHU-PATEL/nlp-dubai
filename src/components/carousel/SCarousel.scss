@@ -1,0 +1,65 @@
+.poster-block {
+  position: relative;
+  .posterImage {
+    height: 100vh;
+    img {
+      margin: auto;
+      display: block;
+      width: 100vw;
+
+      @media only screen and (min-width: 700) {
+        width: auto;
+        height: 100vh;
+      }
+    }
+    &__overlay {
+      position: absolute;
+      padding: 5rem;
+      bottom: 0px;
+      height: 70%;
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      justify-content: flex-end;
+      align-items: flex-start;
+      background-image: linear-gradient(rgb(0, 0, 0, 0), rgb(0, 0, 0, 1));
+      opacity: 1;
+      transition: opacity 0.3s;
+    }
+
+    &__text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transition: all ease-in-out 0.5s;
+      transform: translate(-50%, -50%);
+      &--title {
+        font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+          "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+        color: wheat;
+        transition: all ease-in-out 0.5s;
+        font-weight: 900;
+        font-size: 4rem;
+        width: max-content;
+        margin-bottom: 0.4rem;
+        text-align: left;
+        margin: 5rem;
+      }
+      .btn-click {
+        border: 2px solid white;
+        border-radius: 50px;
+        width: 60px;
+        padding: 1rem 2rem;
+        font-weight: 700;
+        font-size: 2rem;
+        background-color: rgba(0, 0, 0, 0.479);
+        transition: all ease-in-out 0.3s;
+        cursor: pointer;
+        &:hover {
+          background-color: rgb(255, 255, 255, 0.479);
+          color: black;
+        }
+      }
+    }
+  }
+}
