@@ -31,7 +31,7 @@ const Home = () => {
       </div>
       <AboutNlp/>
       <Counter />
-      <CoursesCarousel/>
+     <CoursesCarousel/>
     </div>
   );
 };
