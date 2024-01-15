@@ -15,8 +15,7 @@ header {
       font-size: 2rem;
       padding-top: 1rem;
       @include flexRow(space-between, 1rem);
-      &--contact,
-      &--social {
+      &--contact {
         span {
           margin: 0 1rem 0 1rem;
         }

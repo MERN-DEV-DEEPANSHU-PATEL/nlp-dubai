@@ -6,7 +6,6 @@
       margin: auto;
       display: block;
       width: 100vw;
-
       @media only screen and (min-width: 700) {
         width: auto;
         height: 100vh;
@@ -45,21 +44,30 @@
         text-align: left;
         margin: 5rem;
       }
-      .btn-click {
-        border: 2px solid white;
-        border-radius: 50px;
-        width: 60px;
-        padding: 1rem 2rem;
-        font-weight: 700;
-        font-size: 2rem;
-        background-color: rgba(0, 0, 0, 0.479);
-        transition: all ease-in-out 0.3s;
-        cursor: pointer;
-        &:hover {
-          background-color: rgb(255, 255, 255, 0.479);
-          color: black;
-        }
-      }
+    }
+  }
+}
+
+.scarousel {
+  position: relative;
+  a {
+    position: absolute;
+    top: 70%;
+    left: 45%;
+    width: max-content !important;
+    z-index: 10;
+    border: 2px solid white;
+    border-radius: 50px;
+    width: 60px;
+    padding: 1rem 2rem;
+    font-weight: 700;
+    font-size: 2rem;
+    background-color: rgba(0, 0, 0, 0.479);
+    transition: all ease-in-out 0.3s;
+    cursor: pointer;
+    &:hover {
+      color: black;
+      background-color: rgb(255, 255, 255, 0.479);
     }
   }
 }
