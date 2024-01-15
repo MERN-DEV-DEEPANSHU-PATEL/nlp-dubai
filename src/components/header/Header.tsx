@@ -1,14 +1,9 @@
-import {
-  FaFacebook,
-  FaInstagramSquare,
-  FaLinkedin,
-  FaPhoneAlt,
-  FaTwitter,
-} from "react-icons/fa";
+import { FaPhoneAlt } from "react-icons/fa";
 import "./Header.scss";
 import { MdEmail } from "react-icons/md";
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { useEffect, useRef } from "react";
+import Sicons from "../social-icons/Sicons";
 
 const Header = () => {
   let hTopRef = useRef(null);
@@ -65,28 +60,7 @@ const Header = () => {
             </span>
           </div>
           {/* SOCIAL */}
-          <div className="nav-top--social">
-            <span className="icon">
-              <Link to={""}>
-                <FaFacebook />
-              </Link>
-            </span>
-            <span className="icon">
-              <Link to={""}>
-                <FaTwitter />
-              </Link>
-            </span>
-            <span className="icon">
-              <Link to={""}>
-                <FaLinkedin />
-              </Link>
-            </span>
-            <span className="icon">
-              <Link to={""}>
-                <FaInstagramSquare />
-              </Link>
-            </span>
-          </div>
+          <Sicons />
         </div>
         <div className="nav-bottom">
           <div className="logo">
