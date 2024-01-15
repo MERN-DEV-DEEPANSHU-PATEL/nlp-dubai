@@ -5,16 +5,16 @@ import "./Footer.scss";
 const Footer = () => {
   return (
     <section className="footer">
-      <div className="cols">
-        <div className="col-1">
+      <div className="footer-cols">
+        <div className="footer-cols--col-1">
           <img src="logo.png" alt="NLP Dubai" />
           <p>powered by</p>
           <img src="img.png" alt="UV consultants" />
           <Sicons />
         </div>
-        <div className="col">
+        <div className="footer-cols--col">
           <h3>UseFul Links</h3>
-          <ul className="links">
+          <ul className="footer-cols--col-links">
             <li>
               <Link to={"/"}>Home</Link>
             </li>
@@ -35,7 +35,7 @@ const Footer = () => {
             </li>
           </ul>
         </div>
-        <div className="col">
+        <div className="footer-cols--col">
           <h3>Newsletter</h3>
           <div className="inputs">
             <input type="text" placeholder="Enter you Email Here" />
@@ -45,7 +45,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="copyright">
+      <div className="footer-copyright">
         &copy; Copyright NLPTrainingDubai 2018. All Right Reserved. Designed and
         Developed by <Link to="">SyStos Technology</Link>
       </div>

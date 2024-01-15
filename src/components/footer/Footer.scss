@@ -1,15 +1,14 @@
 .footer {
-  width: 100vw;
+  width: 100%;
   display: flex;
   flex-direction: column;
-  .cols {
+  &-cols {
     background-color: gray;
     padding: 20px;
     display: flex;
     flex-wrap: wrap;
-
     justify-content: space-around;
-    .col-1 {
+    &--col-1 {
       text-align: center;
       img {
         width: 25rem;
@@ -19,15 +18,14 @@
         font-size: 3rem;
       }
     }
-    .col {
+    &--col {
       text-align: center;
       h3 {
         font-size: 4.3rem;
         color: white;
-        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
-          sans-serif;
+        font-family: monospace;
       }
-      .links {
+      &-links {
         margin-top: 2rem;
         list-style: none;
       }
@@ -76,7 +74,7 @@
     }
   }
 
-  .copyright {
+  &-copyright {
     padding: 2rem;
     text-align: center;
     font-size: 2rem;

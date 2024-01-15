@@ -1,0 +1,23 @@
+.about {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  .container {
+    padding: 8rem;
+    .section-1 {
+      .row {
+        h3 {
+          color: #cf2e2e;
+          font-size: 2rem;
+          margin: 1rem 0;
+        }
+        p {
+          font-size: 1.9rem;
+        }
+        .strategy {
+          ul {
+            list-style: none;
+          }
+        }
+      }
+    }
+  }
+}

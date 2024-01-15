@@ -3,6 +3,7 @@ import "./Header.scss";
 import { MdEmail } from "react-icons/md";
 import { NavLink } from "react-router-dom";
 import { useEffect, useRef } from "react";
+import { animateScroll } from "react-scroll";
 import Sicons from "../social-icons/Sicons";
 
 const Header = () => {
@@ -10,7 +11,9 @@ const Header = () => {
   let nav = useRef(null);
   let header = useRef(null);
 
-  console.log();
+  const scrollToTop = () => {
+    animateScroll.scrollToTop({ duration: 300, smooth: "easeInOutQuad" });
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -68,25 +71,39 @@ const Header = () => {
           </div>
           <div className="items">
             <span className="link">
-              <NavLink to="/">Home</NavLink>
+              <NavLink to="/" onClick={scrollToTop}>
+                Home
+              </NavLink>
             </span>
             <span className="link">
-              <NavLink to="/">About US</NavLink>
+              <NavLink to="about" onClick={scrollToTop}>
+                About US
+              </NavLink>
             </span>
             <span className="link">
-              <NavLink to="/">Courses</NavLink>
+              <NavLink onClick={scrollToTop} to="/courses">
+                Courses
+              </NavLink>
             </span>
             <span className="link">
-              <NavLink to="/">Training</NavLink>
+              <NavLink onClick={scrollToTop} to="/training">
+                Training
+              </NavLink>
             </span>
             <span className="link">
-              <NavLink to="/">Events</NavLink>
+              <NavLink onClick={scrollToTop} to="/events">
+                Events
+              </NavLink>
             </span>
             <span className="link">
-              <NavLink to="/">Blog</NavLink>
+              <NavLink onClick={scrollToTop} to="/blog">
+                Blog
+              </NavLink>
             </span>
             <span className="link">
-              <NavLink to="/">Contact</NavLink>
+              <NavLink onClick={scrollToTop} to="/contact">
+                Contact
+              </NavLink>
             </span>
           </div>
         </div>
