@@ -1,5 +1,8 @@
 import SCarousel from "../../components/carousel/SCarousel";
 import Counter from "../../components/counter/Counter";
+import AboutNlp from "../../components/About-Nlp/About-npl";
+import CoursesCarousel from "../../components/CoursesCarousel/CoursesCarousel";
+
 import "./Home.scss";
 
 const Home = () => {
@@ -26,7 +29,9 @@ const Home = () => {
       <div className="carouse-container">
         <SCarousel data={data} />
       </div>
+      <AboutNlp/>
       <Counter />
+      <CoursesCarousel/>
     </div>
   );
 };
