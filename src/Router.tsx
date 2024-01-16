@@ -8,6 +8,7 @@ import Training from "./pages/training/Training";
 import Events from "./pages/events/Events";
 import Blog from "./pages/blog/Blog";
 import Contact from "./pages/contact/Contact";
+import SingleBlog from "./components/singleBlog/SingleBlog";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -36,6 +37,10 @@ const router = createBrowserRouter([
       {
         path: "/blog",
         element: <Blog />,
+      },
+      {
+        path: "/blog/:id",
+        element: <SingleBlog />,
       },
       {
         path: "/contact",
