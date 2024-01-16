@@ -1,4 +1,38 @@
-.container{
+.course-section{
     padding: 5rem;
+    align-items: center;
+    
+}
+.team-section{
+    padding: 5rem;
+    text-align: center;
 }
 
+.course-card{
+    background: #fafafa;
+    border: solid 1px #f0f0f0;
+    border-radius: 5px;
+    padding: 8px 8px 8px 8px;
+    text-align: center;
+}
+
+.heading{
+    font-size: 30px;
+    color: rgb(211, 78, 78);
+    margin-bottom: 20px;
+    text-align: center;
+}
+p {
+    font-size: 23px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-weight: 500;
+}
+h2 {
+    font-size: 23px;
+    color: red;
+    font-weight: 400;
+}
+.team-position{
+    font-size: 1.5rem;
+}

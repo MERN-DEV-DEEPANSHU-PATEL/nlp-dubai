@@ -2,7 +2,8 @@ import SCarousel from "../../components/carousel/SCarousel";
 import Counter from "../../components/counter/Counter";
 import AboutNlp from "../../components/About-Nlp/About-npl";
 import CoursesCarousel from "../../components/CoursesCarousel/CoursesCarousel";
-
+//import Contact from "../../components/contact-Us/Contact";
+import NlpTrainer from "../../components/Nlp-Trainer/NlpTrainer";
 import "./Home.scss";
 
 const Home = () => {
@@ -32,6 +33,8 @@ const Home = () => {
       <AboutNlp/>
       <Counter />
      <CoursesCarousel/>
+      {/* <Contact/> */}
+      <NlpTrainer/>
     </div>
   );
 };
