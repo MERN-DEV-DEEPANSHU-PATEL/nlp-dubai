@@ -25,7 +25,7 @@ export const Faculty = [
   },
   {
     name: "Vikram Dhar",
-    img: "vikram.png",
+    img: "vikram.jpg",
     position: "Associate Trainer",
     about: `Mr. Vikram Dhar is an internationally acclaimed NLP Trainer who facilitates NLP and Coaching programs across the globe. He is also a Licensed Behavioral Master Trainer. Vikram is an ICF-Mentor Coach, Licensed Meta-NLP Trainer certified by Michael Hall (co-founder of Neuro-Semantics) and Certified NLP Trainer (ABNLP, USA) and Member NLP Trainer (ANLP, UK). Vikram is also a Licensed NLP Coach (Certified by Richard Bandler, co-founder of NLP) and has attended the International NLP Coach & New Code Practitioner training directly with John Grinder (co-founder of NLP). Vikram holds a Master’s Degree in Computer Science from Bradley University, Illinois, USA and is a modern day Business Growth Hacker and a Business Coach. In his corporate career, he has worked with market leaders in many roles – IT Risk and Business Advisor, Sales Leader and Coach, for over a decade and half.`,
   },

@@ -1,12 +1,29 @@
-import { Strategy } from "../../ConstantData";
+import { Faculty, Strategy } from "../../ConstantData";
 import Heading from "../../components/page-heading/Heading";
 import "./About.scss";
+
+const FacultyCard = ({ name, img, position, about }) => {
+  return (
+    <div className="faculty">
+      <div className="faculty__info">
+        <img src={img} alt={name} />
+        <span className="faculty__info--name">{name}</span>
+        <span className="faculty__info--position">{position}</span>
+      </div>
+      <div className="faculty__about">
+        <h1>{name}</h1>
+        <hr />
+        <p>{about}</p>
+      </div>
+    </div>
+  );
+};
 
 const About = () => {
   return (
     <section className="about">
       <Heading extraText={"us"} />
-      <div className="container">
+      <div className="about__container">
         <div className="section-1">
           <div className="row">
             <h3>Enabling Transformation!</h3>
@@ -73,6 +90,43 @@ const About = () => {
                 })}
               </ul>
             </div>
+          </div>
+        </div>
+        <div className="section-2">
+          <h2>Mission</h2>
+          <hr />
+          <p>
+            To transform the lives of individuals by offering premium quality
+            Certified NLP Training and Coaching, that provide practical
+            knowledge and skills, resources and strategies, to help them grow
+            personally and professionally and lead more fulfilling lives.
+          </p>
+          <h2>Founders & Faculty</h2>
+          <hr />
+          <h3>
+            We don’t just add value, we create transformations and transformers
+          </h3>
+          <p>
+            As an organisation that operates on the basis of integrity and a
+            commitment to bring out the best in people, we believe that each of
+            our programs must be vital for the person experiencing it, to bring
+            about a true, positive change in their lives. Our leaders and
+            faculty resonate with this belief and strive to create an overall
+            coaching experience that will not only empower participants to
+            enhance their lives but which will make their entire learning
+            journey impactful and bring about an empowering shift. The sessions
+            conducted are enjoyable along with great learnings to last a
+            lifetime.
+          </p>
+          <div className="faculties">
+            {Faculty.map((item) => (
+              <FacultyCard
+                name={item.name}
+                position={item.position}
+                about={item.about}
+                img={item.img}
+              />
+            ))}
           </div>
         </div>
       </div>
