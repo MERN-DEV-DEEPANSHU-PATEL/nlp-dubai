@@ -1,8 +1,12 @@
 import { Link } from "react-router-dom";
 import Sicons from "../social-icons/Sicons";
 import { FaTelegramPlane } from "react-icons/fa";
+import { animateScroll } from "react-scroll";
 import "./Footer.scss";
 const Footer = () => {
+  const scrollToTop = () => {
+    animateScroll.scrollToTop({ duration: 300, smooth: "easeInOutQuad" });
+  };
   return (
     <section className="footer">
       <div className="footer-cols">
@@ -16,22 +20,34 @@ const Footer = () => {
           <h3>UseFul Links</h3>
           <ul className="footer-cols--col-links">
             <li>
-              <Link to={"/"}>Home</Link>
+              <Link onClick={scrollToTop} to={"/"}>
+                Home
+              </Link>
             </li>
             <li>
-              <Link to={"/about"}>About</Link>
+              <Link onClick={scrollToTop} to={"/about"}>
+                About
+              </Link>
             </li>
             <li>
-              <Link to={"/"}>Event Details</Link>
+              <Link onClick={scrollToTop} to={"/events"}>
+                Event Details
+              </Link>
             </li>
             <li>
-              <Link to={"/"}>Courses</Link>
+              <Link onClick={scrollToTop} to={"/courses"}>
+                Courses
+              </Link>
             </li>
             <li>
-              <Link to={"/"}>Training</Link>
+              <Link onClick={scrollToTop} to={"/training"}>
+                Training
+              </Link>
             </li>
             <li>
-              <Link to={"/"}>Contact</Link>
+              <Link onClick={scrollToTop} to={"/contact"}>
+                Contact
+              </Link>
             </li>
           </ul>
         </div>
