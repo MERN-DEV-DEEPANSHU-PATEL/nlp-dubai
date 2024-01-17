@@ -6,7 +6,7 @@ const SCarousel = ({ data }) => {
   return (
     <div className="scarousel">
       <Carousel
-        showThumbs={true}
+        showThumbs={false}
         autoPlay={true}
         interval={2500}
         transitionTime={500}
@@ -14,8 +14,8 @@ const SCarousel = ({ data }) => {
         showStatus={false}
         animationHandler="fade"
       >
-        {data.map((item) => (
-          <div className="poster-block">
+        {data.map((item, index) => (
+          <div className="poster-block" key={index}>
             <div className="posterImage">
               <img src={`${item.img_url}`} />
             </div>

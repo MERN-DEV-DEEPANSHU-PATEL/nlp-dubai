@@ -1,0 +1,89 @@
+@import "../../mixin&var";
+
+.contact {
+  max-width: 1200px;
+  margin: auto;
+  &__container {
+    margin: 2rem 0;
+    font-family: monospace;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 5rem;
+    @include md {
+      flex-direction: row;
+      justify-content: center;
+      gap: 10%;
+    }
+
+    h1 {
+      text-transform: capitalize;
+      font-size: 4rem;
+    }
+    .info {
+      width: 100%;
+      display: flex;
+      flex: 5;
+      flex-direction: column;
+
+      img {
+        width: 25rem;
+        margin-bottom: 2rem;
+      }
+      .item span {
+        font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+        margin: 3rem;
+        font-size: 3rem;
+        margin: 3rem;
+        @include md {
+          font-size: 2rem;
+        }
+        svg {
+          color: red;
+        }
+      }
+    }
+
+    .inputs {
+      width: 100%;
+      display: flex;
+      flex: 6;
+      flex-direction: column;
+      justify-content: flex-start;
+      &__container {
+        margin-top: 1rem;
+        display: grid;
+        grid-template-columns: 100%;
+        gap: 2rem;
+
+        input,
+        button {
+          margin-left: 1rem;
+          width: 80%;
+          padding: 1rem;
+          font-size: 2rem;
+          &:focus {
+            outline: none;
+            border: 2px solid red;
+            border-radius: 5px;
+          }
+        }
+        button {
+          background-color: rgb(255, 67, 67);
+          border: 2px solid red;
+          font-size: 2.5rem;
+          transition: all ease-in-out 0.3s;
+          &:hover {
+            translate: 0 -2px;
+            background-color: red;
+          }
+          &:active {
+            background-color: darkred;
+            translate: 0 2px;
+          }
+        }
+      }
+    }
+  }
+}

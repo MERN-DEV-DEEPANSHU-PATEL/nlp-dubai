@@ -1,0 +1,32 @@
+@import "../../mixin&var";
+.blog__container {
+  max-width: 1100px;
+  margin: 5rem auto;
+  img {
+    margin: 1rem;
+    width: 100%;
+  }
+  p {
+    margin: 1rem;
+    font-size: 3.3rem;
+    @include md {
+      font-size: 2.5rem;
+    }
+    @include lg {
+      font-size: 2rem;
+    }
+  }
+}
+
+.blog__footer {
+  p {
+    margin: 1rem;
+    font-size: 3.3rem;
+    @include md {
+      font-size: 2.5rem;
+    }
+    @include lg {
+      font-size: 2rem;
+    }
+  }
+}
