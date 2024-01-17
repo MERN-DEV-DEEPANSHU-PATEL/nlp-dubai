@@ -1,0 +1,52 @@
+.course__container {
+  .image {
+    max-width: 1150px;
+    margin: 5rem auto;
+    img {
+      width: 100%;
+    }
+  }
+  .stickers {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 1100px;
+    margin: 1rem auto;
+  }
+  &--heading h2 {
+    text-align: center;
+    margin: 2rem auto;
+    font-size: 4.35rem;
+    color: rgb(31, 29, 29);
+  }
+  .btn-register {
+    max-width: 1100px;
+    margin: auto;
+    button {
+      background-color: #435494;
+      color: white;
+      padding: 1.7rem 3rem;
+      width: 20rem;
+      font-size: 1.8rem;
+      margin: 2rem auto;
+      border: none;
+      transition: all ease-in-out 0.3s;
+      &:hover {
+        translate: 0 -3px;
+      }
+      &:active {
+        translate: 0 2px;
+      }
+    }
+  }
+
+  .about-course {
+    padding: 2rem;
+    max-width: 1150px;
+    margin: 2rem auto;
+    background-color: indigo;
+    color: white;
+    height: max-content;
+  }
+}

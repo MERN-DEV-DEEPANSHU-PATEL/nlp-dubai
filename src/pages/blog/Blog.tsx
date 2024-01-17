@@ -1,7 +1,7 @@
 import { BlogData } from "../../ConstantData";
 import BlogItem from "../../components/blogitem/BlogItem";
 import Heading from "../../components/page-heading/Heading";
-import SingleBlog from "../../components/singleBlog/SingleBlog";
+import SingleBlog from "./singleBlog/SingleBlog";
 import "./Blog.scss";
 import { BlogListData } from "../../ConstantData";
 

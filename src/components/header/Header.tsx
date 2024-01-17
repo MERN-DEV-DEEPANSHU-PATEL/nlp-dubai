@@ -67,7 +67,7 @@ const Header = () => {
         </div>
         <div className="nav-bottom">
           <div className="logo">
-            <img src="logo.png" alt="NLP Dubai" />
+            <img src="/logo.png" alt="NLP Dubai" />
           </div>
           <div className="items">
             <span className="link">

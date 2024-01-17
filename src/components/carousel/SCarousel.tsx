@@ -9,6 +9,8 @@ const SCarousel = ({ data }) => {
         showThumbs={false}
         autoPlay={true}
         interval={2500}
+        autoFocus={true}
+        stopOnHover={false}
         transitionTime={500}
         infiniteLoop={true}
         showStatus={false}

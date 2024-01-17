@@ -11,9 +11,9 @@ const Footer = () => {
     <section className="footer">
       <div className="footer-cols">
         <div className="footer-cols--col-1">
-          <img src="logo.png" alt="NLP Dubai" />
+          <img src="/logo.png" alt="NLP Dubai" />
           <p>powered by</p>
-          <img src="img.png" alt="UV consultants" />
+          <img src="/img.png" alt="UV consultants" />
           <Sicons />
         </div>
         <div className="footer-cols--col">

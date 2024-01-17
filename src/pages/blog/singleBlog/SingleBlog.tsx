@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
-import Heading from "../page-heading/Heading";
+import Heading from "../../../components/page-heading/Heading";
 import DOMPurify from "dompurify";
 import "./SingleBlog.scss";
 import { useParams } from "react-router-dom";
-import { BlogData } from "../../ConstantData";
+import { BlogData } from "../../../ConstantData";
 const SingleBlog = () => {
   const { id } = useParams();
   const sanitizedHtml = DOMPurify.sanitize(BlogData[id]?.htmlData);
