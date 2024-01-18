@@ -4,6 +4,8 @@ import AboutNlp from "../../components/About-Nlp/About-npl";
 import CoursesCarousel from "../../components/CoursesCarousel/CoursesCarousel";
 //import Contact from "../../components/contact-Us/Contact";
 import NlpTrainer from "../../components/Nlp-Trainer/NlpTrainer";
+import Video from "../../components/video/video";
+import Program from "../../components/Programs/Program";
 import "./Home.scss";
 
 const Home = () => {
@@ -35,6 +37,8 @@ const Home = () => {
      <CoursesCarousel/>
       {/* <Contact/> */}
       <NlpTrainer/>
+      <Video/>
+      <Program/>
     </div>
   );
 };
