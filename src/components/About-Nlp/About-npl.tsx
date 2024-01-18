@@ -1,16 +1,22 @@
-import "./About-Nlp.scss";
+
 import { useState } from "react";
 import { Collapse } from "react-bootstrap";
+import "./About-Nlp.scss"
 
 const Card = ({ title, content }) => {
   const [open, setOpen] = useState(false);
+  
+  
+  const toggleCollapse = () => {
+    setOpen(!open);
+  };
+
 
   return (
     <div className="card">
       <button
         className="collpase-button"
-        onFocus={() => setOpen(!open)}
-        onBlur={() => setOpen(!open)}
+        onClick={toggleCollapse}
       >
         {title}
       </button>
