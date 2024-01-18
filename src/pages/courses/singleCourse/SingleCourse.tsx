@@ -1,6 +1,7 @@
 import Heading from "../../../components/page-heading/Heading";
 import "./SingleCourse.scss";
 import OwlCarousel from "react-owl-carousel";
+
 import AllCourseData from "./AllCoursesData";
 import { useParams } from "react-router-dom";
 // defining Template for all courses

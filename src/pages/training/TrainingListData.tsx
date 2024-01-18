@@ -23,7 +23,7 @@ const TListData = [
   {
     id: 3,
     heading: "YES TO INSPIRED MINDS",
-    image: false,
+    image: "case-studies-4-min.jpg",
     subtext:
       "The Purpose of this program is “To empower our youth with the knowledge, skills and confidence to conduct themselves with poise and professionalism”.",
   },

@@ -1,0 +1,35 @@
+.single-training--page {
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+  height: 100vh;
+  background-image: linear-gradient(rgba(0, 0, 255, 0.5), rgb(102, 102, 226));
+  section {
+    scroll-snap-align: start;
+    height: 100vh;
+    position: relative;
+
+    img {
+      width: 100%;
+      opacity: 0.2;
+      position: absolute;
+    }
+    .content,
+    .content2 {
+      max-width: 110rem;
+      padding: 10rem;
+      margin: auto;
+
+      p {
+        font-size: 2rem;
+      }
+    }
+    .content2 .slider {
+      width: 100%;
+      font-size: 1.7rem;
+      h2 {
+        color: indigo;
+      }
+    }
+  }
+}

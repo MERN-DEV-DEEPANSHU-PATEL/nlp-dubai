@@ -10,6 +10,7 @@ import Contact from "./pages/contact/Contact";
 import SingleBlog from "./pages/blog/singleBlog/SingleBlog";
 import Error404 from "./pages/404error/Error404";
 import SingleCourse from "./pages/courses/singleCourse/SingleCourse";
+import SingleTraining from "./pages/training/singleTraininf/SingleTraining";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -35,6 +36,10 @@ const router = createBrowserRouter([
       {
         path: "/training",
         element: <Training />,
+      },
+      {
+        path: "/training/:id",
+        element: <SingleTraining />,
       },
       {
         path: "/events",

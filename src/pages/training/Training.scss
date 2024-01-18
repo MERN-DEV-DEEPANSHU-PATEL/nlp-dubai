@@ -1,0 +1,20 @@
+@import "../../mixin&var";
+
+.taining__container {
+  max-width: 115rem;
+  margin: 10rem auto;
+  display: grid;
+  text-align: center;
+  grid-template-columns: 100%;
+  gap: 1rem;
+  @include ssm {
+    grid-template-columns: 50% 50%;
+  }
+  @include res(82rem) {
+    grid-template-columns: 33% 33% 33%;
+  }
+  @include xxl {
+    grid-template-columns: 20% 20% 20% 20%;
+    max-width: none;
+  }
+}
