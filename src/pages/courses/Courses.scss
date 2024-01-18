@@ -1,0 +1,63 @@
+@import "../../mixin&var";
+
+.courses {
+  &__container {
+    max-width: 115rem;
+    margin: 10rem auto;
+    display: grid;
+    text-align: center;
+    grid-template-columns: 100%;
+    gap: 1rem;
+    @include ssm {
+      grid-template-columns: 50% 50%;
+    }
+    @include res(82rem) {
+      grid-template-columns: 33% 33% 33%;
+    }
+    @include xxl {
+      grid-template-columns: 20% 20% 20% 20%;
+      max-width: none;
+    }
+    .course__card {
+      border: 1px solid rgb(80, 69, 69);
+      padding: 1rem;
+      border-radius: 5px;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      text-align: center;
+      align-items: center;
+      img {
+        width: 100%;
+      }
+      a {
+        color: #e23535;
+        font-size: 2.5rem;
+        &:hover {
+          color: red;
+        }
+      }
+      p {
+        font-size: 1.6rem;
+        color: grey;
+      }
+      .button {
+        padding: 1rem 2rem;
+        color: white;
+        background-color: rgb(214, 76, 76);
+        font-size: 1.6rem;
+        border-radius: 5px;
+        border: none;
+        transition: all ease-in-out 0.3s;
+        &:hover {
+          background-color: rgb(160, 27, 27);
+          translate: 0 -3px;
+        }
+        &:active {
+          translate: 0 3px;
+        }
+      }
+    }
+  }
+}

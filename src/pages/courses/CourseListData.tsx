@@ -1,4 +1,4 @@
-const CoursesList = [
+const CoursesListData = [
   {
     id: 0,
     heading: "Certified Life Coaching",
@@ -50,4 +50,4 @@ const CoursesList = [
   },
 ];
 
-export default CoursesList;
+export default CoursesListData;
