@@ -11,6 +11,7 @@ import SingleBlog from "./pages/blog/singleBlog/SingleBlog";
 import Error404 from "./pages/404error/Error404";
 import SingleCourse from "./pages/courses/singleCourse/SingleCourse";
 import SingleTraining from "./pages/training/singleTraininf/SingleTraining";
+import EventGallery from "./pages/events/eventgallery/EventGallery";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -44,6 +45,10 @@ const router = createBrowserRouter([
       {
         path: "/events",
         element: <Events />,
+      },
+      {
+        path: "/events/gallery",
+        element: <EventGallery />,
       },
       {
         path: "/blog",

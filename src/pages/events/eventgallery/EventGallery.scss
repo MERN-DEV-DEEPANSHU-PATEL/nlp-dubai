@@ -1,0 +1,55 @@
+@import "../../../mixin&var";
+.event-gallery {
+  .event-gallery-container {
+    max-width: 120rem;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .pictures {
+      display: grid;
+      grid-template-columns: 33.333% 33.333% 33.33%;
+      gap: 1rem;
+      @include md {
+        grid-template-columns: 25% 25% 25% 25%;
+      }
+      @include lg {
+        grid-template-columns: 20% 20% 20% 20% 20%;
+      }
+
+      .picture-container img {
+        width: 100%;
+      }
+    }
+  }
+  .fullView {
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    left: 0;
+    z-index: 9999999;
+    position: fixed;
+    background-color: #00000041;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img {
+      width: 90vw;
+      height: auto;
+      @include res(1000px) {
+        height: 90vh;
+        width: auto;
+      }
+    }
+
+    button {
+      position: fixed;
+      top: 2rem;
+      right: 5rem;
+      background-color: transparent;
+      position: absolute;
+      font-size: 4rem;
+      border: none;
+    }
+  }
+}

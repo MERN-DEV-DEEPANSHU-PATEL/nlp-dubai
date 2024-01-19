@@ -5,7 +5,8 @@ import { NavLink } from "react-router-dom";
 import { useEffect, useRef } from "react";
 import { animateScroll } from "react-scroll";
 import Sicons from "../social-icons/Sicons";
-
+import { motion } from "framer-motion";
+import { contactVariants, iconVariants } from "../../assets/ainmation/Navabar";
 const Header = () => {
   let hTopRef = useRef(null);
   let nav = useRef(null);
@@ -48,7 +49,12 @@ const Header = () => {
       >
         <div className="nav-top" ref={hTopRef}>
           {/* CONTACT */}
-          <div className="nav-top--contact">
+          <motion.div
+            variants={contactVariants}
+            initial="initial"
+            animate="animate"
+            className="nav-top--contact"
+          >
             <span className="c-item">
               <FaPhoneAlt />
               <a href="tel:+971 4 8525752, +971 50 670 5615">
@@ -61,9 +67,15 @@ const Header = () => {
                 nlptraining@uvconsultants.com
               </a>
             </span>
-          </div>
+          </motion.div>
           {/* SOCIAL */}
-          <Sicons />
+          <motion.div
+            variants={iconVariants}
+            initial="initial"
+            animate="animate"
+          >
+            <Sicons />
+          </motion.div>
         </div>
         <div className="nav-bottom">
           <div className="logo">
