@@ -1,0 +1,42 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu&display=swap");
+.events-container {
+  max-width: 120rem;
+  margin: auto;
+
+  .cards-list {
+    margin: 5rem auto;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    gap: 2rem;
+    .e-card {
+      display: flex;
+      flex-direction: column;
+      .image {
+        width: 100%;
+        img {
+          height: 30rem;
+          border-radius: 10px;
+          width: 100%;
+        }
+      }
+      .text {
+        font-family: "Ubuntu", sans-serif;
+        border-radius: 10px;
+        padding: 2rem;
+        background-color: #fff;
+        border-top: 2px solid yellow;
+        width: 90%;
+        margin: -8rem 2rem auto 2rem;
+        h2 {
+          font-size: 2.5rem;
+          color: black;
+          font-weight: 600;
+        }
+        p {
+          //   width: 50%;
+          font-size: 1.3rem;
+        }
+      }
+    }
+  }
+}
