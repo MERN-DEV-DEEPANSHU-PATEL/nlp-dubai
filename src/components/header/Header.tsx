@@ -2,36 +2,40 @@ import { FaPhoneAlt } from "react-icons/fa";
 import "./Header.scss";
 import { MdEmail } from "react-icons/md";
 import { NavLink } from "react-router-dom";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { animateScroll } from "react-scroll";
 import Sicons from "../social-icons/Sicons";
 import { motion } from "framer-motion";
 import { contactVariants, iconVariants } from "../../assets/ainmation/Navabar";
 import { links } from "./Links";
-import Navlink from "./NavLinks";
+import Sidebar from "../sidebar/Sidebar";
 const Header = () => {
   let hTopRef = useRef(null);
   let nav = useRef(null);
   let header = useRef(null);
-
+  const [mobileMenu, setMobileMenu] = useState(false);
   const scrollToTop = () => {
     animateScroll.scrollToTop({ duration: 300, smooth: "easeInOutQuad" });
   };
+  const handleScroll = () => {
+    const scrollY = window.scrollY;
+    const navTopHeight = hTopRef.current.clientHeight;
+
+    if (scrollY > navTopHeight) {
+      // User scrolled down
+      header.current.classList.add("header-fixed");
+    } else {
+      // User scrolled back to top
+      header.current.classList.remove("header-fixed");
+    }
+  };
 
   useEffect(() => {
-    const handleScroll = () => {
-      const scrollY = window.scrollY;
-      const navTopHeight = hTopRef.current.clientHeight;
-
-      if (scrollY > navTopHeight) {
-        // User scrolled down
-        header.current.classList.add("header-fixed");
-      } else {
-        // User scrolled back to top
-        header.current.classList.remove("header-fixed");
-      }
-    };
-
+    if (window.innerWidth <= 1000) {
+      setMobileMenu(true);
+    } else {
+      setMobileMenu(false);
+    }
     window.addEventListener("scroll", handleScroll);
 
     return () => {
@@ -39,7 +43,9 @@ const Header = () => {
     };
   }, []);
 
-  return (
+  return mobileMenu ? (
+    <Sidebar scrollToTop={scrollToTop} />
+  ) : (
     <header ref={header}>
       <nav
         className={`nav ${
@@ -96,7 +102,7 @@ const Header = () => {
             </span>
             {links.map((item) => {
               return (
-                <span className="link">
+                <span key={item.id} className="link">
                   <NavLink
                     className="link-item"
                     onClick={scrollToTop}
@@ -138,5 +144,4 @@ const Header = () => {
     </header>
   );
 };
-
 export default Header;

@@ -27,3 +27,46 @@ export const contactVariants = {
     },
   },
 };
+
+export const SidebarVariants = {
+  open: {
+    clipPath: "circle(120rem at 12rem 12rem)",
+    transition: {
+      type: "spring",
+      stiffness: 20,
+    },
+  },
+  closed: {
+    clipPath: "circle(4rem at 35rem 5rem)",
+    transition: {
+      delay: 0.5,
+      type: "spring",
+      stiffness: 400,
+      damping: 40,
+    },
+  },
+};
+
+export const SidebarLinksVariants = {
+  open: {
+    transition: {
+      staggeredChildren: 0.1,
+    },
+  },
+  closed: {
+    transition: {
+      staggeredChildren: 0.05,
+      staggeredDirection: -1,
+    },
+  },
+};
+export const SidebarLinksItemVariants = {
+  open: {
+    y: 0,
+    opacity: 1,
+  },
+  closed: {
+    y: 50,
+    opacity: 0,
+  },
+};
