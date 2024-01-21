@@ -69,12 +69,48 @@ header {
         @include flexRow(space-between, 2.5rem);
         font-size: 2rem;
         .link {
-          transition: all ease-in-out 0.3s;
-
-          &:hover {
-            transform: scale(1.2);
-            a {
+          position: relative;
+          text-transform: capitalize;
+          border: none;
+          &-item {
+            border: none;
+            padding-bottom: 3.5rem;
+            transition: all ease-in-out 0.3s;
+            &:hover {
+              font-size: 2.2rem;
               color: red;
+            }
+            &:hover + .link-dropdown {
+              transform: scaleY(1);
+            }
+          }
+          &-dropdown {
+            transform-origin: 0 0;
+            background-color: #8b1515;
+            transform: scaleY(1);
+            position: absolute;
+            transform: scaleY(0);
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+            flex-direction: column;
+            font-size: 1.5rem;
+            font-weight: 500;
+            top: calc(100% + 3.5rem);
+            left: 0;
+            width: 21rem;
+            transition: all ease-in-out 0.3s;
+            &:hover {
+              transform: scaleY(1);
+            }
+            &-item {
+              transition: all ease-in-out 0.3s;
+
+              padding: 1rem;
+              &:hover {
+                color: red;
+                font-size: 1.6rem;
+              }
             }
           }
         }

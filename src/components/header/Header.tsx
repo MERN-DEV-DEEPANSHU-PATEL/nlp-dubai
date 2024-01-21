@@ -7,6 +7,8 @@ import { animateScroll } from "react-scroll";
 import Sicons from "../social-icons/Sicons";
 import { motion } from "framer-motion";
 import { contactVariants, iconVariants } from "../../assets/ainmation/Navabar";
+import { links } from "./Links";
+import Navlink from "./NavLinks";
 const Header = () => {
   let hTopRef = useRef(null);
   let nav = useRef(null);
@@ -83,37 +85,50 @@ const Header = () => {
           </div>
           <div className="items">
             <span className="link">
-              <NavLink to="/" onClick={scrollToTop}>
+              <NavLink className="link-item" to="/" onClick={scrollToTop}>
                 Home
               </NavLink>
             </span>
             <span className="link">
-              <NavLink to="about" onClick={scrollToTop}>
+              <NavLink className="link-item" to="about" onClick={scrollToTop}>
                 About US
               </NavLink>
             </span>
+            {links.map((item) => {
+              return (
+                <span className="link">
+                  <NavLink
+                    className="link-item"
+                    onClick={scrollToTop}
+                    to={`${item.route}`}
+                  >
+                    {item.heading}
+                  </NavLink>
+                  <div className="link-dropdown">
+                    {item.subHeadings.map((subitem) => (
+                      <NavLink
+                        className="link-dropdown-item"
+                        key={subitem.id}
+                        to={`${item.route}/${subitem.id}`}
+                      >
+                        {subitem.heading}
+                      </NavLink>
+                    ))}
+                  </div>
+                </span>
+              );
+            })}
             <span className="link">
-              <NavLink onClick={scrollToTop} to="/courses">
-                Courses
-              </NavLink>
-            </span>
-            <span className="link">
-              <NavLink onClick={scrollToTop} to="/training">
-                Training
-              </NavLink>
-            </span>
-            <span className="link">
-              <NavLink onClick={scrollToTop} to="/events">
-                Events
-              </NavLink>
-            </span>
-            <span className="link">
-              <NavLink onClick={scrollToTop} to="/blog">
+              <NavLink className="link-item" onClick={scrollToTop} to="/blog">
                 Blog
               </NavLink>
             </span>
             <span className="link">
-              <NavLink onClick={scrollToTop} to="/contact">
+              <NavLink
+                className="link-item"
+                onClick={scrollToTop}
+                to="/contact"
+              >
                 Contact
               </NavLink>
             </span>

@@ -8,10 +8,10 @@ const SCarousel = ({ data }) => {
       <Carousel
         showThumbs={false}
         autoPlay={true}
-        interval={2500}
+        interval={3000}
         autoFocus={true}
         stopOnHover={false}
-        transitionTime={500}
+        transitionTime={800}
         infiniteLoop={true}
         showStatus={false}
         animationHandler="fade"
