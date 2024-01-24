@@ -1,0 +1,48 @@
+.collapse-card {
+  max-width: 100rem;
+  margin: auto;
+
+  &-item {
+    font-size: 2rem;
+    cursor: pointer;
+    &::after {
+      display: inline-block;
+      font-size: inherit;
+      text-rendering: auto;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      content: "\005E";
+      transform: rotate(180deg);
+      transition: all ease-in-out 0.3s;
+      float: right;
+      color: black;
+    }
+  }
+  &-items {
+    .card_body {
+      transition: all linear 0.25s;
+      transform-origin: 0 0;
+      opacity: 0;
+      height: 0;
+      transform: scaleY(0);
+      p {
+        font-size: 1.5rem;
+      }
+    }
+  }
+}
+
+.open {
+  .collapse-card-item {
+    &::after {
+      transform: rotate(0);
+    }
+  }
+  .collapse-card-items {
+    .card_body {
+      height: auto;
+      opacity: 1;
+      transform: scaleY(1);
+    }
+  }
+}

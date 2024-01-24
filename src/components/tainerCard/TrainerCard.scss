@@ -1,0 +1,47 @@
+@import "../../mixin&var";
+.trainer {
+  max-width: 1150px;
+  margin: auto;
+  background-color: lightgray;
+  h1 {
+    text-align: center;
+    color: blue;
+    font-size: 3rem;
+  }
+  &__about {
+    h1 {
+      color: black;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 3.2rem;
+      margin: 2rem;
+    }
+    h5 {
+      font-size: 2.5rem;
+      color: black;
+      text-align: center;
+    }
+  }
+  &__container {
+    display: grid;
+    grid-template-columns: 100%;
+    @include sm {
+      grid-template-columns: 50% 50%;
+    }
+
+    .image {
+      text-align: center;
+      img {
+        border: 2px double;
+        width: 100%;
+      }
+    }
+    &--text {
+      margin-top: 2rem;
+      p {
+        margin-left: 2rem;
+        font-size: 1.5rem;
+      }
+    }
+  }
+}

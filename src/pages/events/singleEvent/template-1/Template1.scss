@@ -1,0 +1,71 @@
+.single-event {
+  .section-1 {
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(211, 211, 211, 0.219);
+    .side-poster {
+      width: 50%;
+    }
+    .describe {
+      width: 100%;
+      display: flex;
+      p {
+        font-size: 1.5rem;
+      }
+      &-container {
+        padding: 4rem;
+        h3 {
+          font-size: 2rem;
+          margin: 2rem;
+          color: rgb(0, 0, 170);
+        }
+        .points table {
+          background-color: #fff;
+          td {
+            border: 1px solid grey;
+            border-collapse: collapse;
+            padding: 1rem;
+            font-size: 1.5rem;
+            .tY1czp {
+              font-size: 1.5rem;
+            }
+          }
+        }
+        .extra-point {
+          a {
+            color: blue;
+          }
+        }
+      }
+    }
+  }
+
+  .section-2 {
+    .para-mid {
+      max-width: 100rem;
+      text-align: center;
+      font-size: 1.5rem;
+      margin: 4rem auto;
+    }
+    .heading-blue {
+      width: 100%;
+      background-color: rgba(211, 211, 211, 0.281);
+      h3 {
+        width: 90%;
+        text-align: center;
+        margin: auto;
+        color: rgb(6, 6, 133);
+        font-size: 2.2rem;
+      }
+    }
+    .trainer {
+      &__container {
+        .image img {
+          border: 2px double;
+          width: auto;
+          height: 80%;
+        }
+      }
+    }
+  }
+}

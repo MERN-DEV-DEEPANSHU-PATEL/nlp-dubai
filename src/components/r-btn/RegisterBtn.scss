@@ -1,0 +1,21 @@
+.btn-register {
+  max-width: 1100px;
+  margin: auto;
+  text-align: center;
+  button {
+    background-color: #435494;
+    color: white;
+    padding: 1.7rem 3rem;
+    width: 20rem;
+    font-size: 1.8rem;
+    margin: 2rem auto;
+    border: none;
+    transition: all ease-in-out 0.3s;
+    &:hover {
+      translate: 0 -3px;
+    }
+    &:active {
+      translate: 0 2px;
+    }
+  }
+}

@@ -1,16 +1,15 @@
-import Heading from "../../../components/page-heading/Heading";
-import "./SingleCourse.scss";
+import Heading from "../../../../components/page-heading/Heading";
+import RegiterBtn from "../../../../components/r-btn/RegiterBtn";
+import Stickers, { Stiker } from "../../../../components/stickers/Stickers";
+import TrainerCard from "../../../../components/tainerCard/TrainerCard";
 import OwlCarousel from "react-owl-carousel";
-
-import AllCourseData from "./AllCoursesData";
+import "./Template2.scss";
+import AllData from "./AllData";
 import { useParams } from "react-router-dom";
-import RegiterBtn from "../../../components/r-btn/RegiterBtn";
-import TrainerCard from "../../../components/tainerCard/TrainerCard";
-import Stickers, { Stiker } from "../../../components/stickers/Stickers";
 
-const SingleCourse = ({}) => {
+const Template2 = () => {
   const { id } = useParams();
-  const course = AllCourseData[id];
+  let course = AllData[id];
   const options = {
     items: 1,
     loop: true,
@@ -21,10 +20,9 @@ const SingleCourse = ({}) => {
     dots: true,
     margin: 10,
   };
-
   return (
     <div>
-      <Heading headingText={course.heading} />
+      <Heading />
       {course.onlyText ? (
         <div
           className="course__container"
@@ -40,12 +38,36 @@ const SingleCourse = ({}) => {
 
           <div className="course__container--heading">
             <h2>{course.heading}</h2>
+            {course.extraDetails?.map((para, index) => (
+              <p
+                key={index}
+                className="some-text"
+                dangerouslySetInnerHTML={{ __html: para }}
+              ></p>
+            ))}
           </div>
           <RegiterBtn />
-          <div
-            className="about-course"
-            dangerouslySetInnerHTML={{ __html: course.colorContainer }}
-          ></div>
+          <div className="about-course2">
+            {course.colorContainerImage ? (
+              <img src={`/${course.colorContainerImage}`} alt="" />
+            ) : (
+              <div
+                className="course-price"
+                style={{
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                }}
+                dangerouslySetInnerHTML={{
+                  __html: [course.certificate, course.invesment],
+                }}
+              ></div>
+            )}
+            <div
+              className="about-course2-text"
+              dangerouslySetInnerHTML={{ __html: course.colorContainer }}
+            ></div>
+          </div>
           <div style={{ backgroundColor: "cyan" }}>
             <div className="syllabus-course">
               <div className="syllabus">
@@ -118,6 +140,10 @@ const SingleCourse = ({}) => {
               </div>
             </div>
           </div>
+          <div
+            className="extra-content"
+            dangerouslySetInnerHTML={{ __html: course.extraColorContainer }}
+          ></div>
           <div>
             <div className="benifits syllabus-course">
               <div className="img">
@@ -140,6 +166,12 @@ const SingleCourse = ({}) => {
               </div>
             </div>
           </div>
+          <div
+            className="course-price"
+            dangerouslySetInnerHTML={{
+              __html: [course.certificate, course.invesment],
+            }}
+          ></div>
           <div className="extra">
             <div className="extra__box">
               <h4>Powerful advantages when you enroll now</h4>
@@ -181,7 +213,10 @@ const SingleCourse = ({}) => {
           ) : (
             <TrainerCard />
           )}
-
+          <div
+            className="extraTrainer"
+            dangerouslySetInnerHTML={{ __html: course.extraTrainer }}
+          ></div>
           <div className="ending">
             <p>
               If you’re excited by the potential of transforming your life, we
@@ -197,4 +232,4 @@ const SingleCourse = ({}) => {
   );
 };
 
-export default SingleCourse;
+export default Template2;

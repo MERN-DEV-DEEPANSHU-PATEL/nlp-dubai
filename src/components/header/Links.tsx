@@ -63,11 +63,7 @@ export const links = [
     route: "/events",
     subHeadings: [
       {
-        id: 1,
-        heading: "events details",
-      },
-      {
-        id: 2,
+        id: "gallery",
         heading: "Events gallery",
       },
     ],
