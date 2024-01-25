@@ -5,7 +5,7 @@ import RegiterBtn from "../../../../components/r-btn/RegiterBtn";
 import Stickers from "../../../../components/stickers/Stickers";
 import TrainerCard from "../../../../components/tainerCard/TrainerCard";
 import "./Template1.scss";
-import AllData from "../template-2/AllData";
+import AllData, { collapseBarContent } from "../AllData";
 
 const Template1 = () => {
   const { id } = useParams();
@@ -65,7 +65,15 @@ const Template1 = () => {
             coaching skills, and dedication to clients.
           </h3>
         </div>
-        <div style={{ margin: "5rem" }}></div>
+        <div style={{ margin: "5rem" }}>
+          {collapseBarContent.map((item) => (
+            <CollapseBar
+              key={item.id}
+              heading={item.heading}
+              paragraph={item.paragraph}
+            />
+          ))}
+        </div>
         <TrainerCard />
         <RegiterBtn />
         <p className="para-mid">

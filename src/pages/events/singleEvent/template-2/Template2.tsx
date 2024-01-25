@@ -4,7 +4,7 @@ import Stickers, { Stiker } from "../../../../components/stickers/Stickers";
 import TrainerCard from "../../../../components/tainerCard/TrainerCard";
 import OwlCarousel from "react-owl-carousel";
 import "./Template2.scss";
-import AllData from "./AllData";
+import AllData from "../AllData";
 import { useParams } from "react-router-dom";
 
 const Template2 = () => {

@@ -19,8 +19,9 @@
     }
   }
   &-items {
-    .card_body {
+    .text_content .card-body {
       transition: all linear 0.25s;
+      margin: 2rem auto;
       transform-origin: 0 0;
       opacity: 0;
       height: 0;
@@ -39,7 +40,7 @@
     }
   }
   .collapse-card-items {
-    .card_body {
+    .text_content .card-body {
       height: auto;
       opacity: 1;
       transform: scaleY(1);

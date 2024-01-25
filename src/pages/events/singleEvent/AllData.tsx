@@ -1006,7 +1006,7 @@ export const collapseBarContent = [
     id: 1,
     heading: "ICF definition of Coaching",
     paragraph:
-      '<div class="card-body">ICF defines coaching as partnering with clients in a thought-provoking and creative process that inspires them to maximize their personal and professional potential. The process of coaching often unlocks previously untapped sources of imagination, productivity and leadership.</div>',
+      '<div class="card-body"><p>ICF defines coaching as partnering with clients in a thought-provoking and creative process that inspires them to maximize their personal and professional potential. The process of coaching often unlocks previously untapped sources of imagination, productivity and leadership.</p></div>',
   },
   {
     id: 2,
